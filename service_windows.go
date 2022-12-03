@@ -456,7 +456,7 @@ func (ws *windowsService) Start() error {
 		return err
 	}
 	defer s.Close()
-	return s.Start()
+	return s.Start("is", "manual-started")
 }
 
 func (ws *windowsService) Stop() error {
